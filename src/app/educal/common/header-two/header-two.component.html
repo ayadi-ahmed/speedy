@@ -20,15 +20,15 @@
                       <nav id="mobile-menu" class="d-none d-xl-block">
                          <ul>
                             <li>
-                              <a [routerLink]="['/courses']">Devenir bricoleur</a>
+                              <a [routerLink]="['/courses-sidebar']">Demander un service</a>
                            </li>
-                           <li><a [routerLink]="['/contact']">Connexion</a></li>
-                           <li><a [routerLink]="['/contact']">Inscription</a></li>
+                           <li><a [routerLink]="['/sign-in']">Connexion</a></li>
+                           <li><a [routerLink]="['/sign-up']">Inscription</a></li>
                          </ul>
                       </nav>
                    </div>
                    <div class="header__btn header__btn-2 ml-50 d-none d-sm-block">
-                      <a [routerLink]="['/sign-up']" class="e-btn">Demander un service</a>
+                      <a [routerLink]="['/contact']" class="e-btn">Devenir Partenaire</a>
                    </div>
                    <div class="sidebar__menu d-xl-none">
                       <div (click)="handleSidebar()" class="sidebar-toggle-btn ml-30" id="sidebar-toggle">
@@ -64,72 +64,17 @@
          <div class="side-info-content sidebar-menu mm-menu">
 
             <ul>
-              <li class="menu-item-has-children has-droupdown"
-              [class.active]="showHomeDropdown">
-                  <a (click)="homeDropdown()">Home</a >
-                  <ul class="sub-menu" [class.active]="showHomeDropdown">
-                    <li>
-                        <a [routerLink]="['/']" >Home Style 1</a>
-                    </li>
-                    <li>
-                        <a [routerLink]="['/home-two']" >Home Style 2</a>
-                    </li>
-                    <li>
-                        <a [routerLink]="['/home-three']" >Home Style 3</a>
-                    </li>
-                  </ul>
-              </li>
-
-              <li class="menu-item-has-children has-droupdown"
-              [class.active]="showCoursesDropdown">
-                    <a (click)="coursesDropdown()">Courses</a>
-                    <ul class="sub-menu" [class.active]="showCoursesDropdown">
-                          <li>
-                            <a [routerLink]="['/courses']">Courses</a>
-                          </li>
-                          <li>
-                            <a [routerLink]="['/courses-list']">Course List</a>
-                          </li>
-                          <li>
-                            <a [routerLink]="['/courses-sidebar']">Course sidebar </a>
-                          </li>
-                          <li>
-                            <a [routerLink]="['/course-details']">Course Details</a>
-                          </li>
-                    </ul>
-                  </li>
-
-                  <li class="menu-item-has-children has-droupdown"
-                  [class.active]="showBlogDropdown">
-
-                <a (click)="blogDropdown()">Blog</a>
-                <ul class="sub-menu"
-                [class.active]="showBlogDropdown">
-                <li><a [routerLink]="['/blog']">Blog</a></li>
-                <li><a [routerLink]="['/blog-details']">Blog Details</a></li>
-                </ul>
-              </li>
-
-              <li class="menu-item-has-children has-droupdown"
-              [class.active]="showPagesDropdown">
-                  <a (click)="pagesDropDown()">Pages</a>
-                  <ul class="sub-menu"
-                  [class.active]="showPagesDropdown">
-                  <li><a [routerLink]="['/about']">About</a></li>
-                  <li><a [routerLink]="['/instructor']">Instructor</a></li>
-                  <li><a [routerLink]="['/instructor-details']">Instructor Details</a></li>
-                  <li><a [routerLink]="['/event-details']">Event Details</a></li>
-                  <li><a [routerLink]="['/cart']">My Cart</a></li>
-                  <li><a [routerLink]="['/wishlist']">My Wishlist</a></li>
-                  <li><a [routerLink]="['/checkout']">checkout</a></li>
-                  <li><a [routerLink]="['/sign-in']">Sign In</a></li>
-                  <li><a [routerLink]="['/sign-up']">Sign Up</a></li>
-                  <li><a [routerLink]="['/error']">Error</a></li>
-                  </ul>
-              </li>
-
               <li>
-                  <a [routerLink]="['/contact']" class="border-0">Contact</a>
+                <a [routerLink]="['/courses-sidebar']" class="border-0">Demander un service</a>
+            </li>
+            <li>
+              <a [routerLink]="['/sign-in']" class="border-0">Connexion</a>
+          </li>
+          <li>
+            <a [routerLink]="['/sign-up']" class="border-0">Inscription</a>
+        </li>
+              <li>
+                  <a [routerLink]="['/contact']" class="border-0">Devenir partenaire</a>
               </li>
 
           </ul>

@@ -11,21 +11,18 @@ export class CoursesComponent implements OnInit {
   courseData = [
     {
       id: 1,
-      courseImage: "assets/img/course/course-1.jpg",
-      listImg: "assets/img/course/list/course_list_1.jpeg",
-      lesson: "43",
-      title: "Become a product Manager learn the skills & job.",
+      courseImage: "assets/img/services/a.svg",
+      listImg: "assets/img/services/a.svg",
+      title: "Installation d'un radiateur électrique",
       rating: "4.5",
-      teacherImg: "assets/img/course/teacher/teacher-1.jpg",
-      teacherName: "Jim Séchen",
-      category: "Art & Design",
-      price: "21.00",
-      oldPrice: "33.00"
+      category: "Bricolage",
+      price: "250.00",
+      oldPrice: "330.00"
     },
     {
       id: 2,
-      courseImage: "assets/img/course/course-2.jpg",
-      listImg: "assets/img/course/list/course_list_2.jpeg",
+      courseImage: "assets/img/services/b.svg",
+      listImg: "assets/img/services/b.svg",
       lesson: "72",
       title: "Fundamentals of music theory Learn new",
       rating: "4.0",
@@ -38,8 +35,8 @@ export class CoursesComponent implements OnInit {
     },
     {
       id: 3,
-      courseImage: "assets/img/course/course-3.jpg",
-      listImg: "assets/img/course/list/course_list_3.jpeg",
+      courseImage: "assets/img/services/c.svg",
+      listImg: "assets/img/services/c.svg",
       lesson: "35",
       title: "Bases Matemáticas dios Álgebra Ecuacion",
       rating: "4.3",
@@ -52,8 +49,8 @@ export class CoursesComponent implements OnInit {
     },
     {
       id: 4,
-      courseImage: "assets/img/course/course-4.jpg",
-      listImg: "assets/img/course/list/course_list_4.jpeg",
+      courseImage: "assets/img/services/d.svg",
+      listImg: "assets/img/services/d.svg",
       lesson: "60",
       title: "Strategy law and organization Foundation",
       rating: "3.5",
@@ -66,8 +63,8 @@ export class CoursesComponent implements OnInit {
     },
     {
       id: 5,
-      courseImage: "assets/img/course/course-5.jpg",
-      listImg: "assets/img/course/list/course_list_5.jpeg",
+      courseImage: "assets/img/services/e.svg",
+      listImg: "assets/img/services/e.svg",
       lesson: "28",
       title: "The business Intelligence analyst Course 2022",
       rating: "4.5",
@@ -80,8 +77,8 @@ export class CoursesComponent implements OnInit {
     },
     {
       id: 6,
-      courseImage: "assets/img/course/course-6.jpg",
-      listImg: "assets/img/course/list/course_list_6.jpeg",
+      courseImage: "assets/img/services/g.svg",
+      listImg: "assets/img/services/g.svg",
       lesson: "38",
       title: "Bases Matemáticas dios Álgebra Ecuacion",
       rating: "4.8",
