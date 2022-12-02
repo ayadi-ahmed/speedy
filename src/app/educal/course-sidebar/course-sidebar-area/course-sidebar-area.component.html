@@ -33,19 +33,16 @@
                     </ul>
                  </div>
                  <div class="course__view">
-                    <h4>Showing 1 - 9 of 84</h4>
+                    <h4>Pages 1 - 9 de 84</h4>
                  </div>
               </div>
               <div class="course__sort d-flex justify-content-sm-end">
                  <div class="course__sort-inner">
                     <select>
-                       <option>Default</option>
-                       <option>Option 1</option>
-                       <option>Option 2</option>
-                       <option>Option 3</option>
-                       <option>Option 4</option>
-                       <option>Option 5</option>
-                       <option>Option 6</option>
+                       <option>Par defalt</option>
+                       <option>Prix croissant</option>
+                       <option>Prix décroissant</option>
+                       
                     </select>
                  </div>
               </div>
@@ -59,7 +56,7 @@
                       <div *ngFor="let course of courseData" class="col-xxl-6 col-xl-6 col-lg-6 col-md-6">
                         <div class="course__item white-bg mb-30 fix">
                            <div class="course__thumb w-img p-relative fix">
-                              <a [routerLink]="['/course-details']">
+                              <a [routerLink]="['/service-1']">
                                  <img src="{{course.courseImage}}" alt="">
                               </a>
                               <div class="course__tag">
@@ -68,22 +65,22 @@
                            </div>
                            <div class="course__content">
                               <div class="course__meta d-flex align-items-center justify-content-between">
-                                 <div class="course__lesson">
+                                 <!-- <div class="course__lesson">
                                     <span><i class="far fa-book-alt"></i>
                                         {{course.lesson}} Lesson</span>
-                                 </div>
+                                 </div> -->
                                  <div class="course__rating">
                                     <span><i class="icon_star"></i>{{course.rating}} (44)</span>
                                  </div>
                               </div>
-                              <h3 class="course__title"><a [routerLink]="['/course-details']">
+                              <h3 class="course__title"><a [routerLink]="['/service-1']">
                                   {{course.title}}</a></h3>
-                              <div class="course__teacher d-flex align-items-center">
+                              <!-- <div class="course__teacher d-flex align-items-center">
                                  <div class="course__teacher-thumb mr-15">
                                     <img src="{{course.teacherImg}}" alt="">
                                  </div>
                                  <h6><a [routerLink]="['/instructor-details']">{{course.teacherName}}</a></h6>
-                              </div>
+                              </div> -->
                            </div>
                            <div class="course__more d-flex justify-content-between align-items-center">
                             <div class="course__status d-flex align-items-center">
@@ -91,8 +88,8 @@
                                 <span class="old-price">${{course.oldPrice}}</span>
                              </div>
                               <div class="course__btn">
-                                 <a [routerLink]="['/course-details']" class="link-btn">
-                                    Know Details
+                                 <a [routerLink]="['/service-1']" class="link-btn">
+                                    Voir plus
                                     <i class="far fa-arrow-right"></i>
                                     <i class="far fa-arrow-right"></i>
                                  </a>
@@ -111,7 +108,7 @@
                            <div class="row gx-0">
                               <div class="col-xxl-4 col-xl-4 col-lg-4">
                                  <div class="course__thumb course__thumb-list w-img p-relative fix">
-                                    <a [routerLink]="['/course-details']">
+                                    <a [routerLink]="['/service-1']">
                                       <img src="{{course.listImg}}" alt="">
                                     </a>
                                     <div class="course__tag">
@@ -134,10 +131,10 @@
                                           </div>
                                        </div>
                                        <h3 class="course__title">
-                                         <a [routerLink]="['/course-details']">
+                                         <a [routerLink]="['/service-1']">
                                         {{course.title}}</a>
                                       </h3>
-                                       <div class="course__teacher d-flex align-items-center">
+                                       <!-- <div class="course__teacher d-flex align-items-center">
                                         <div class="course__teacher-thumb mr-15">
                                           <img src="{{course.teacherImg}}" alt="">
                                        </div>
@@ -145,7 +142,7 @@
                                          <a [routerLink]="['/instructor-details']">
                                            {{course.teacherName}}</a>
                                         </h6>
-                                       </div>
+                                       </div> -->
                                     </div>
                                     <div class="course__more course__more-2 course__more-3 d-flex justify-content-between align-items-center">
                                       <div class="course__status d-flex align-items-center">
@@ -182,7 +179,7 @@
            <div class="course__sidebar pl-70">
               <div class="course__sidebar-search mb-50">
                  <form action="#">
-                    <input type="text" placeholder="Search for courses...">
+                    <input type="text" placeholder="Chercher un service...">
                     <button type="submit">
                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 584.4 584.4" style="enable-background:new 0 0 584.4 584.4;" xml:space="preserve">
                           <g>
@@ -198,68 +195,82 @@
 
               <div class="course__sidebar-widget grey-bg">
                  <div class="course__sidebar-info">
-                    <h3 class="course__sidebar-title">Categories</h3>
+                    <h3 class="course__sidebar-title">Filtres</h3>
                     <ul>
                        <li>
                           <div class="course__sidebar-check mb-10 d-flex align-items-center">
                              <input class="m-check-input" type="checkbox" id="m-eng">
-                             <label class="m-check-label" for="m-eng">English  (6)</label>
+                             <label class="m-check-label" for="m-eng">Bricolage  (6)</label>
                           </div>
                        </li>
                        <li>
                           <div class="course__sidebar-check mb-10 d-flex align-items-center">
                              <input class="m-check-input" type="checkbox" id="m-edu">
-                             <label class="m-check-label" for="m-edu">Education  (8)</label>
+                             <label class="m-check-label" for="m-edu">Electricité  (8)</label>
                           </div>
                        </li>
                        <li>
                           <div class="course__sidebar-check mb-10 d-flex align-items-center">
                              <input class="m-check-input" type="checkbox" id="m-bus">
-                             <label class="m-check-label" for="m-bus">Business  (5)</label>
+                             <label class="m-check-label" for="m-bus">Jadinage  (5)</label>
                           </div>
                        </li>
                        <li>
                           <div class="course__sidebar-check mb-10 d-flex align-items-center">
                              <input class="m-check-input" type="checkbox" id="m-design">
-                             <label class="m-check-label" for="m-design">UX Design  (3)</label>
+                             <label class="m-check-label" for="m-design">Informatique  (10)</label>
                           </div>
                        </li>
                        <li>
                           <div class="course__sidebar-check mb-10 d-flex align-items-center">
                              <input class="m-check-input" type="checkbox" id="m-math">
-                             <label class="m-check-label" for="m-math">Mathematics  (3)</label>
+                             <label class="m-check-label" for="m-math">Enfants  (3)</label>
                           </div>
                        </li>
+
+                       <li>
+                        <div class="course__sidebar-check mb-10 d-flex align-items-center">
+                           <input class="m-check-input" type="checkbox" id="m-math">
+                           <label class="m-check-label" for="m-math">Animaux  (6)</label>
+                        </div>
+                     </li>
                     </ul>
                  </div>
               </div>
 
               <div class="course__sidebar-widget grey-bg">
                  <div class="course__sidebar-info">
-                    <h3 class="course__sidebar-title">Language</h3>
+                    <h3 class="course__sidebar-title">Zone d'intervention</h3>
                     <ul>
                        <li>
                           <div class="course__sidebar-check mb-10 d-flex align-items-center">
                              <input class="m-check-input" type="checkbox" id="m-all">
-                             <label class="m-check-label" for="m-all">All Language</label>
+                             <label class="m-check-label" for="m-all">Grand Tunis</label>
                           </div>
                        </li>
                        <li>
                           <div class="course__sidebar-check mb-10 d-flex align-items-center">
                              <input class="m-check-input" type="checkbox" id="m-eng-2">
-                             <label class="m-check-label" for="m-eng-2">English</label>
+                             <label class="m-check-label" for="m-eng-2">Sousse</label>
                           </div>
                        </li>
                        <li>
                           <div class="course__sidebar-check mb-10 d-flex align-items-center">
                              <input class="m-check-input" type="checkbox" id="m-russ">
-                             <label class="m-check-label" for="m-russ">Russian</label>
+                             <label class="m-check-label" for="m-russ">Sfax</label>
                           </div>
                        </li>
+
+                       <li>
+                        <div class="course__sidebar-check mb-10 d-flex align-items-center">
+                           <input class="m-check-input" type="checkbox" id="m-russ">
+                           <label class="m-check-label" for="m-russ">Nabeul</label>
+                        </div>
+                     </li>
                     </ul>
                  </div>
               </div>
-
+<!-- 
               <div class="course__sidebar-widget grey-bg">
                  <div class="course__sidebar-info">
                     <h3 class="course__sidebar-title">Price Filter</h3>
@@ -284,9 +295,9 @@
                        </li>
                     </ul>
                  </div>
-              </div>
+              </div> -->
 
-              <div class="course__sidebar-widget grey-bg">
+              <!-- <div class="course__sidebar-widget grey-bg">
                  <div class="course__sidebar-info">
                     <h3 class="course__sidebar-title">Skill level</h3>
                     <ul>
@@ -316,10 +327,10 @@
                        </li>
                     </ul>
                  </div>
-              </div>
+              </div> -->
 
             <!-- app-related-course start -->
-            <app-related-course></app-related-course>
+            <!-- <app-related-course></app-related-course> -->
             <!-- app-related-course end -->
 
            </div>

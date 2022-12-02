@@ -43,11 +43,11 @@ const routes: Routes = [
     component: CoursesListPageComponent
   },
   {
-    path: 'courses-sidebar',
+    path: 'nos-services',
     component: CourseSidebarMainComponent
   },
   {
-    path: 'course-details',
+    path: 'service-1',
     component: CourseDetailsComponent
   },
   {
@@ -99,7 +99,7 @@ const routes: Routes = [
     component: ErrorPageComponent
   },
   {
-    path: 'contact',
+    path: 'partenaire',
     component: ContactMainComponent
   },
   {
