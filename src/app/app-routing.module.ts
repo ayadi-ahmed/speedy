@@ -9,7 +9,7 @@ import { CourseSidebarMainComponent } from './educal/course-sidebar/course-sideb
 import { CourseDetailsComponent } from './educal/course-details/course-details-main/course-details.component';
 import { BlogComponent } from './educal/blog/blog-main/blog.component';
 import { BlogDetailsMainComponent } from './educal/blog-details/blog-details-main/blog-details-main.component';
-import { AboutMainComponent } from './educal/about/about-main/about-main.component';
+// import { AboutMainComponent } from './educal/about/about-main/about-main.component';
 import { InstructorMainComponent } from './educal/instructor/instructor-main/instructor-main.component';
 import { InstructorDetailsComponent } from './educal/instructor-details/instructor-details-main/instructor-details.component';
 import { EventDetailsMainComponent } from './educal/event-details/event-details-main/event-details-main.component';
@@ -58,10 +58,10 @@ const routes: Routes = [
     path: 'blog-details',
     component: BlogDetailsMainComponent
   },
-  {
-    path: 'about',
-    component: AboutMainComponent
-  },
+  // {
+  //   path: 'about',
+  //   component: AboutMainComponent
+  // },
   {
     path: 'instructor',
     component: InstructorMainComponent

@@ -51,7 +51,7 @@ import { BlogAreaComponent } from './blog/blog-area/blog-area.component';
 import { BlogDetailsMainComponent } from './blog-details/blog-details-main/blog-details-main.component';
 import { BlogDetailsTitleComponent } from './blog-details/blog-details-title/blog-details-title.component';
 import { BlogDetailsAreaComponent } from './blog-details/blog-details-area/blog-details-area.component';
-import { AboutMainComponent } from './about/about-main/about-main.component';
+// import { AboutMainComponent } from './about/about-main/about-main.component';
 import { InstructorMainComponent } from './instructor/instructor-main/instructor-main.component';
 import { InstructorAreaComponent } from './instructor/instructor-area/instructor-area.component';
 import { InstructorDetailsComponent } from './instructor-details/instructor-details-main/instructor-details.component';
@@ -75,6 +75,7 @@ import { ContactMainComponent } from './contact/contact-main/contact-main.compon
 import { ContactAreaComponent } from './contact/contact-area/contact-area.component';
 import { ContactInfoComponent } from './contact/contact-info/contact-info.component';
 import { BlogTwoComponent } from './home-two/blog-two/blog-two.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -127,7 +128,7 @@ import { BlogTwoComponent } from './home-two/blog-two/blog-two.component';
     BlogDetailsMainComponent,
     BlogDetailsTitleComponent,
     BlogDetailsAreaComponent,
-    AboutMainComponent,
+    // AboutMainComponent,
     InstructorMainComponent,
     InstructorAreaComponent,
     InstructorDetailsComponent,
@@ -154,8 +155,10 @@ import { BlogTwoComponent } from './home-two/blog-two/blog-two.component';
   ],
   imports: [
     CommonModule,
+    ReactiveFormsModule,
     RouterModule,
     MatTabsModule,
+    FormsModule,
     SwiperModule,
   ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
