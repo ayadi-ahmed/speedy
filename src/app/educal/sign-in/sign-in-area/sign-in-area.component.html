@@ -11,8 +11,8 @@
      <div class="row">
         <div class="col-xxl-8 offset-xxl-2 col-xl-8 offset-xl-2">
            <div class="section__title-wrapper text-center mb-55">
-              <h2 class="section__title">Sign in to <br>  recharge direct.</h2>
-              <p>it you don't have an account you can <a href="#">Register here!</a></p>
+              <h2 class="section__title">Se connecter</h2>
+              <p>Si vous n'avez pas de compte, veuillez <a href="#">s'inscrire ici!</a></p>
            </div>
         </div>
      </div>
@@ -21,39 +21,44 @@
            <div class="sign__wrapper white-bg">
               <div class="sign__header mb-35">
                  <div class="sign__in text-center">
-                    <a href="#" class="sign__social text-start mb-15"><i class="fab fa-facebook-f"></i>Sign in with Facebook</a>
-                    <p> <span>........</span> Or, <a [routerLink]="['/sign-in']">sign in</a> with your email<span> ........</span> </p>
+                    <a href="#" class="sign__social text-start mb-15"><i class="fab fa-facebook-f"></i>Connecter avec Facebook</a>
+                    <p> <span>........</span> Or, <a [routerLink]="['/sign-in']">Connecter</a> avec votre email<span> ........</span> </p>
                  </div>
               </div>
               <div class="sign__form">
-                 <form action="#">
-                    <div class="sign__input-wrapper mb-25">
-                       <h5>Work email</h5>
+                  <form  [formGroup]="login" (ngSubmit)="logindata(login)" >
+
+                    <div class="form_group sign__input-wrapper mb-25">
+                       <h5>Votre email</h5>
                        <div class="sign__input">
-                          <input type="text" placeholder="e-mail address">
+                          <input type="text" formControlName="email" placeholder="Addresse e-mail">
                           <i class="fal fa-envelope"></i>
                        </div>
                     </div>
-                    <div class="sign__input-wrapper mb-10">
-                       <h5>Password</h5>
+                    <div class="form_group sign__input-wrapper mb-10">
+                       <h5>Mot de passe</h5>
                        <div class="sign__input">
-                          <input type="text" placeholder="Password">
+                          <input type="text" formControlName="password" placeholder="Mot de passe">
                           <i class="fal fa-lock"></i>
                        </div>
                     </div>
+                    
                     <div class="sign__action d-sm-flex justify-content-between mb-30">
                        <div class="sign__agree d-flex align-items-center">
                           <input class="m-check-input" type="checkbox" id="m-agree">
-                          <label class="m-check-label" for="m-agree">Keep me signed in
+                          <label class="m-check-label" for="m-agree">Rester connecté
                              </label>
                        </div>
                        <div class="sign__forgot">
-                          <a href="#">Forgot your password?</a>
+                          <a href="#">Mot de passe oublié?</a>
                        </div>
                     </div>
-                    <button class="e-btn  w-100"> <span></span> Sign In</button>
+                    <!-- <button class="e-btn  w-100"> <span></span> Se connecter</button> -->
+                    <div class="form-group">
+                        <input type="submit" class="btn btn-primary py-3 px-5" value="Se connecter">
+                    </div>
                     <div class="sign__new text-center mt-20">
-                       <p>New to Educal? <a [routerLink]="['/sign-up']">Sign Up</a></p>
+                       <p>Vous êtes nouveau? <a [routerLink]="['/sign-up']">S'enregistrer</a></p>
                     </div>
                  </form>
               </div>

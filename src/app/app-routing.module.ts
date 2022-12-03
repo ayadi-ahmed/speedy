@@ -9,7 +9,7 @@ import { CourseSidebarMainComponent } from './educal/course-sidebar/course-sideb
 import { CourseDetailsComponent } from './educal/course-details/course-details-main/course-details.component';
 import { BlogComponent } from './educal/blog/blog-main/blog.component';
 import { BlogDetailsMainComponent } from './educal/blog-details/blog-details-main/blog-details-main.component';
-import { AboutMainComponent } from './educal/about/about-main/about-main.component';
+// import { AboutMainComponent } from './educal/about/about-main/about-main.component';
 import { InstructorMainComponent } from './educal/instructor/instructor-main/instructor-main.component';
 import { InstructorDetailsComponent } from './educal/instructor-details/instructor-details-main/instructor-details.component';
 import { EventDetailsMainComponent } from './educal/event-details/event-details-main/event-details-main.component';
@@ -24,8 +24,8 @@ import { ContactMainComponent } from './educal/contact/contact-main/contact-main
 
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
-  { path: 'home', component: HomeComponent },
+  { path: '', component: HomeTwoComponent },
+  { path: 'home', component: HomeTwoComponent },
   {
     path: 'home-two',
     component: HomeTwoComponent
@@ -43,11 +43,11 @@ const routes: Routes = [
     component: CoursesListPageComponent
   },
   {
-    path: 'courses-sidebar',
+    path: 'nos-services',
     component: CourseSidebarMainComponent
   },
   {
-    path: 'course-details',
+    path: 'service-1',
     component: CourseDetailsComponent
   },
   {
@@ -58,10 +58,10 @@ const routes: Routes = [
     path: 'blog-details',
     component: BlogDetailsMainComponent
   },
-  {
-    path: 'about',
-    component: AboutMainComponent
-  },
+  // {
+  //   path: 'about',
+  //   component: AboutMainComponent
+  // },
   {
     path: 'instructor',
     component: InstructorMainComponent
@@ -99,7 +99,7 @@ const routes: Routes = [
     component: ErrorPageComponent
   },
   {
-    path: 'contact',
+    path: 'partenaire',
     component: ContactMainComponent
   },
   {

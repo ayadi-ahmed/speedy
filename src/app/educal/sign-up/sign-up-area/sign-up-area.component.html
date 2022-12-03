@@ -12,8 +12,7 @@
      <div class="row">
         <div class="col-xxl-8 offset-xxl-2 col-xl-8 offset-xl-2">
            <div class="section__title-wrapper text-center mb-55">
-              <h2 class="section__title">Create a free <br>  Account</h2>
-              <p>I'm a subhead that goes with a story.</p>
+              <h2 class="section__title">Créer <br>  votre compte</h2>
            </div>
         </div>
      </div>
@@ -22,50 +21,65 @@
            <div class="sign__wrapper white-bg">
               <div class="sign__header mb-35">
                  <div class="sign__in text-center">
-                    <a href="#" class="sign__social g-plus text-start mb-15"><i class="fab fa-google-plus-g"></i>Sign Up with Google</a>
-                    <p> <span>........</span> Or, <a [routerLink]="['/sign-up']">sign up</a> with your email<span> ........</span> </p>
+                    <a href="#" class="sign__social g-plus text-start mb-15"><i class="fab fa-google-plus-g"></i>Se connecter avec Google</a>
+                    <p> <span>........</span> Ou, <a [routerLink]="['/sign-up']">se connecter</a> avec votre email<span> ........</span> </p>
                  </div>
               </div>
               <div class="sign__form">
-                 <form action="#">
+                 <form #signupForm="ngForm" (ngSubmit)="signup()" >
                     <div class="sign__input-wrapper mb-25">
-                       <h5>Full Name</h5>
+                       <h5>Name et prénom</h5>
                        <div class="sign__input">
-                          <input type="text" placeholder="Full name">
+                          <input type="text" [(ngModel)]="user.name"  [ngModelOptions]="{standalone:true}" placeholder="Nom et prénom">
                           <i class="fal fa-user"></i>
                        </div>
                     </div>
                     <div class="sign__input-wrapper mb-25">
-                       <h5>Work email</h5>
+                       <h5>Votre email</h5>
                        <div class="sign__input">
-                          <input type="text" placeholder="e-mail address">
+                          <input type="text" [(ngModel)]="user.email"  [ngModelOptions]="{standalone:true}" placeholder="E-mail">
                           <i class="fal fa-envelope"></i>
                        </div>
                     </div>
                     <div class="sign__input-wrapper mb-25">
-                       <h5>Password</h5>
+                       <h5>Mot de passe</h5>
                        <div class="sign__input">
-                          <input type="text" placeholder="Password">
+                          <input type="text" [(ngModel)]="user.password"  [ngModelOptions]="{standalone:true}" placeholder="Mot de passe">
                           <i class="fal fa-lock"></i>
                        </div>
                     </div>
+                    <div class="sign__input-wrapper mb-25">
+                     <h5>Confirmer mot de passe</h5>
+                     <div class="sign__input">
+                        <input type="text" [(ngModel)]="user.confirmPassword"  [ngModelOptions]="{standalone:true}" placeholder="Confirmer mot de passe">
+                        <i class="fal fa-lock"></i>
+                     </div>
+                  </div>
                     <div class="sign__input-wrapper mb-10">
-                       <h5>Re-Password</h5>
-                       <div class="sign__input">
-                          <input type="text" placeholder="Re-Password">
-                          <i class="fal fa-lock"></i>
-                       </div>
+                       <h5>Vous êtes</h5>
+                       <div class="input-group mb-25">
+                        <div class="input-group-prepend">
+                          <label class="input-group-text" for="inputGroupSelect01">Options</label>
+                        </div>
+                        <select class="custom-select" id="inputGroupSelect01">
+                          <option selected></option>
+                          <option value="1">Particulier</option>
+                          <option value="2">Partenaire</option>
+ 
+                        </select>
+                      </div>
                     </div>
                     <div class="sign__action d-flex justify-content-between mb-30">
                        <div class="sign__agree d-flex align-items-center">
                           <input class="m-check-input" type="checkbox" id="m-agree">
-                          <label class="m-check-label" for="m-agree">I agree to the <a href="#">Terms & Conditions</a>
+                          <label class="m-check-label" for="m-agree">Je confirme <a href="#">les CGU</a>
                              </label>
                        </div>
                     </div>
-                    <button class="e-btn w-100"> <span></span> Sign Up</button>
+                    <button class="e-btn w-100"> <span></span> Enregistrer</button>
+                    <!-- <input class="btn" type="submit" (click)="signup()" value="Signup"> -->
                     <div class="sign__new text-center mt-20">
-                       <p>Already in Educal ? <a [routerLink]="['/sign-in']"> Sign In</a></p>
+                       <p>Vous avez un compte ? <a [routerLink]="['/sign-in']"> Se connecter</a></p>
                     </div>
                  </form>
               </div>
