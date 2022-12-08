@@ -16,9 +16,9 @@ export class SignUpAreaComponent implements OnInit {
   ngOnInit(): void {
     this.signupForm=this.formBuilder.group(
       {
-     name:[""],
-     email:[""],
-     password:[""],
+     nomp:[""],
+     emailp:[""],
+     motdepassep:[""],
      confirmPassword:[""]
     });
   }

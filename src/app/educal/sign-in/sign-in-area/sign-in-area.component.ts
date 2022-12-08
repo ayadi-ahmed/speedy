@@ -17,15 +17,17 @@ export class SignInAreaComponent implements OnInit {
   ngOnInit(): void {
     this.login=this.formBuilder.group(
       {
-     email:[""],
-     password:[""]
+     emailp:[""],
+     motdepassep:[""]
     });
+
+   
   }
 
   logindata(login: FormGroup){
     this.userService.login().subscribe(res=>{
       const user = res.find((a:any)=>{
-      return a.email===this.login.value.email && a.password===this.login.value.password
+      return a.emailp===this.login.value.emailp && a.motdepassep===this.login.value.motdepassep
     });
 
     if(user){
@@ -38,6 +40,8 @@ export class SignInAreaComponent implements OnInit {
 
     }
     });
-
+    var userJson =  JSON.stringify(this.login.value);
+    localStorage.setItem(this.login.value, userJson);
+    console.log("USER ADDED",userJson);
     } 
 }
