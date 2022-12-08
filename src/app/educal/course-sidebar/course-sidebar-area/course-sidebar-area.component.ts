@@ -12,7 +12,7 @@ export class CourseSidebarAreaComponent implements OnInit {
       id: 1,
       courseImage: "assets/img/services/g.svg",
       listImg: "assets/img/services/a.svg",
-      title: "Installation d'un radiateur électrique",
+      title: "Installation d'un radiateur électrique ",
       rating: "4.5",
       category: "Electricité",
       price: "250.00",
