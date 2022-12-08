@@ -5,14 +5,18 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class ServiceProposedService {
-  userURL:string="http://localhost:8081/api/services/"
+  userURL:string="http://localhost:8081/api/services"
   constructor(private httpClient:HttpClient) {  }
   addService(obj: any){
-    return this.httpClient.post(this.userURL+"ajouterService",obj);
+    return this.httpClient.post(this.userURL+"/ajouterService",obj);
    }
 
    getAllServices(){
-    return this.httpClient.get(this.userURL);
+    return this.httpClient.get(this.userURL+"/");
+   }
+
+   getServiceById(id:any){
+    return this.httpClient.get(`${this.userURL}/${id}`);
    }
 
    deleteService(id:any){
