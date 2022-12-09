@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { ServiceParticulier } from '../../Model/ServiceParticulier';
 import { ServiceProposedService } from '../../Services/service-proposed.service';
 
 @Component({
@@ -9,13 +10,11 @@ import { ServiceProposedService } from '../../Services/service-proposed.service'
 })
 export class CourseSidebarAreaComponent implements OnInit {
   services: any;
-  servicesService:any;
-  constructor(servicesService:ServiceProposedService) { 
-    this.servicesService=servicesService;
+  constructor(private servicesService:ServiceProposedService) { 
   }
 
   ngOnInit():void {
-  this.servicesService.getAllServices().subscribe((data:any)=> {
+  this.servicesService.getAllServices().subscribe((data)=> {
       this.services = data;
       console.log(data);
     }

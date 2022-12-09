@@ -44,7 +44,9 @@
               class="course__teacher-3 d-flex align-items-center mr-70 mb-30"
             >
               <div class="course__teacher-thumb-3 mr-15">
-                <img src="assets/img/course/teacher/teacher-1.jpg" alt="" />
+                <!-- <img src="assets/img/course/teacher/teacher-1.jpg" alt="" /> -->
+                <img src={{service.photoService}} alt="" /> 
+
               </div>
               <div class="course__teacher-info-3">
                 <h5>Technicien</h5>
@@ -80,7 +82,9 @@
             </div>
           </div>
           <div class="course__img w-img mb-30">
-            <img src="assets/img/rad.jpg" alt="" />
+            <!-- <img src="assets/img/rad.jpg" alt="" /> -->
+                        <img src={{service.photoService}} alt="" />
+
           </div>
           <div class="course__tab-2 mb-45">
             <ul class="nav nav-tabs" id="courseTab" role="tablist">
@@ -154,9 +158,7 @@
                 <div class="course__description">
                   <!-- <h3>Course Overview</h3> -->
                   <p>
-                    Service d'installation et de branchement de radiateur électrique.
-                    <br>Passez un hiver douillet et bien au chaud en trouvant votre installateur de radiateur électrique sur Speedy
-                  </p>
+                    {{service.descriptionService}} </p>
 
                   
                   <!-- <div class="course__tag-2 mb-35 mt-35">
@@ -1133,12 +1135,12 @@
                 class="course__video-meta mb-25 d-flex align-items-center justify-content-between"
               >
                 <div class="course__video-price">
-                  <h5>250 TND</h5>
-                  <h5 class="old-price">330 TND</h5>
+                  <h5>{{service.prixService}} TND</h5>
+                  <!-- <h5 class="old-price">330 TND</h5> -->
                 </div>
-                <div class="course__video-discount">
+                <!-- <div class="course__video-discount">
                   <span>24% OFF</span>
-                </div>
+                </div> -->
               </div>
               <div class="course__video-content mb-35">
                 <ul>

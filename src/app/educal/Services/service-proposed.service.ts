@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { ServiceParticulier } from '../Model/ServiceParticulier';
 
 @Injectable({
   providedIn: 'root'
@@ -16,7 +17,7 @@ export class ServiceProposedService {
    }
 
    getServiceById(id:any){
-    return this.httpClient.get(`${this.userURL}/${id}`);
+    return this.httpClient.get<ServiceParticulier>(`${this.userURL}/${id}`);
    }
 
    deleteService(id:any){

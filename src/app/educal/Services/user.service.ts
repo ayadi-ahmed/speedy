@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { Particulier } from '../Model/Particulier';
 
 @Injectable({
   providedIn: 'root'
@@ -11,8 +13,14 @@ userURL:string="http://localhost:8081/api"
     return this.httpClient.post(this.userURL+"/AjouterParticulier",obj);
    }
 
-   login(){
-    return this.httpClient.get<any>(this.userURL+"/particuliers");
+   login(login : any){
+    return this.httpClient.post<Particulier>(this.userURL+"/login", login);
+    // return this.httpClient.post(this.userURL+"/login", login);
+
    }
+
+   getAllUsers(){
+return this.httpClient.get<Particulier[]>(this.userURL+"/particuliers");
+  }
 }
  
