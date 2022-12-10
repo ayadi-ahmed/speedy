@@ -61,10 +61,10 @@
                         <div class="input-group-prepend">
                           <label class="input-group-text" for="inputGroupSelect01">Options</label>
                         </div>
-                        <select class="custom-select" id="inputGroupSelect01">
-                          <option selected></option>
-                          <option value="1">Particulier</option>
-                          <option value="2">Partenaire</option>
+                        <select (change)="isBricoFn($event)" [(ngModel)]="user.isBrico"  [ngModelOptions]="{standalone:true}" class="custom-select" id="inputGroupSelect01">
+                          <option  selected></option>
+                          <option value="false">Particulier</option>
+                          <option value="true">Partenaire</option>
  
                         </select>
                       </div>

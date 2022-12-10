@@ -25,6 +25,7 @@ import { DashboardBricoComponent } from './educal/dashboard/dashboard-brico/dash
 import { DashParticuliersComponent } from './educal/dashboard/dash-particuliers/dash-particuliers.component';
 import { DashServicesComponent } from './educal/dashboard/dash-services/dash-services.component';
 import { DashRdvComponent } from './educal/dashboard/dash-rdv/dash-rdv.component';
+import { DashProfilComponent } from './educal/dashboard/dash-profil/dash-profil.component';
 
 
 
@@ -38,6 +39,10 @@ const routes: Routes = [
   {
     path: 'dashboard',
     component: DashboardComponent
+  },
+  {
+    path: 'dashboard/profil',
+    component: DashProfilComponent
   },
   {
     path: 'dashboard/bricoleurs',

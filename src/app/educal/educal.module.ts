@@ -83,6 +83,7 @@ import { DashLeftComponent } from './dashboard/dash-left/dash-left.component';
 import { DashParticuliersComponent } from './dashboard/dash-particuliers/dash-particuliers.component';
 import { DashServicesComponent } from './dashboard/dash-services/dash-services.component';
 import { DashRdvComponent } from './dashboard/dash-rdv/dash-rdv.component';
+import { DashProfilComponent } from './dashboard/dash-profil/dash-profil.component';
 
 
 @NgModule({
@@ -166,6 +167,7 @@ import { DashRdvComponent } from './dashboard/dash-rdv/dash-rdv.component';
     DashParticuliersComponent,
     DashServicesComponent,
     DashRdvComponent,
+    DashProfilComponent,
   ],
   imports: [
     CommonModule,

@@ -22,5 +22,13 @@ userURL:string="http://localhost:8081/api"
    getAllUsers(){
 return this.httpClient.get<Particulier[]>(this.userURL+"/particuliers");
   }
+
+  getUserById(id:any){
+    return this.httpClient.get<Particulier>(`${this.userURL+"/particuliers"}/${id}`)
+  }
+
+  updateUser(id:any,obj:Particulier){
+    return this.httpClient.put<Particulier>(`${this.userURL+"/particuliers"}/${id}`,obj)
+  }
 }
  

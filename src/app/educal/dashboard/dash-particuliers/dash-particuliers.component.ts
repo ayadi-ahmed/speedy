@@ -8,16 +8,13 @@ import { UserService } from '../../Services/user.service';
   styleUrls: ['./dash-particuliers.component.scss']
 })
 export class DashParticuliersComponent implements OnInit {
-services:any ;
-// varr:any;
+particulierList:any[]=[] ;
   constructor(private userService : UserService) { }
 
   ngOnInit(): void {
-    this.userService.getAllUsers().subscribe((data)=> {
-      this.services = data;
-
-      // data.map
-      console.log("services",this.services[0].nomp);
+    this.userService.getAllUsers().subscribe((users)=> {
+      console.log("users are",users);
+      this.particulierList = users;
      
     }
     

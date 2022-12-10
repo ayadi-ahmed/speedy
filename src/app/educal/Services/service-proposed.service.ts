@@ -13,7 +13,7 @@ export class ServiceProposedService {
    }
 
    getAllServices(){
-    return this.httpClient.get(this.userURL+"/");
+    return this.httpClient.get<ServiceParticulier>(this.userURL+"/");
    }
 
    getServiceById(id:any){

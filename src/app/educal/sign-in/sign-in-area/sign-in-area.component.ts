@@ -41,8 +41,6 @@ export class SignInAreaComponent implements OnInit {
         this.router.navigate(["sign-in"]);
        } 
 
-      console.log("email res",this.email === res.emailp );
-
       localStorage.setItem("speedyLoggedUser", JSON.stringify(res));
 
     })

@@ -165,115 +165,38 @@
                                             <thead>
                                                 <tr>
                                                     <th scope="col">(#) Id</th>
-                                                    <th scope="col">Name</th>
-                                                    <th scope="col">Date</th>
-                                                    <th scope="col">Amount</th>
-                                                    <th scope="col" colspan="2">Status</th>
+                                                    <th scope="col">Nom du Service</th>
+                                                    <th scope="col">Prix du service</th>
+                                                    <th scope="col">Description du service</th>
+                                                    <th scope="col">Durée du service</th>
+
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                <tr>
-                                                    <th scope="row">#14256</th>
+                                                <tr *ngFor = "let service of serviceList">
+                                                    <th scope="row">{{service.idService}}</th>
                                                     <td>
                                                         <div>
-                                                            <img src="assets/img/users/user-2.jpg" alt=""
-                                                                class="avatar-xs rounded-circle me-2"> Philip Smead
+                                                            <!-- <img src="assets/img/users/user-2.jpg" alt="" -->
+                                                                <!-- class="avatar-xs rounded-circle me-2">  -->
+                                                                {{service.nomService}}
                                                         </div>
                                                     </td>
-                                                    <td>15/1/2018</td>
-                                                    <td>$94</td>
-                                                    <td><span class="badge bg-success">Delivered</span></td>
+                                                    <td>{{service.prixService}}</td>
+                                                    <td>{{service.descriptionService}}</td>
+                                                    <td>{{service.dureeService}}</td>
+                                                    <!-- <td><span class="badge bg-success">Delivered</span></td> -->
                                                     <td>
                                                         <div>
-                                                            <a href="#" class="btn btn-primary btn-sm">Edit</a>
+                                                            <a href="#" class="btn btn-primary btn-sm">Voir</a>
                                                         </div>
                                                     </td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">#14257</th>
                                                     <td>
                                                         <div>
-                                                            <img src="assets/img/users/user-3.jpg" alt=""
-                                                                class="avatar-xs rounded-circle me-2"> Brent Shipley
+                                                            <a href="#" class="btn btn-danger btn-sm">Supprimer</a>
                                                         </div>
                                                     </td>
-                                                    <td>16/1/2019</td>
-                                                    <td>$112</td>
-                                                    <td><span class="badge bg-warning">Pending</span></td>
-                                                    <td>
-                                                        <div>
-                                                            <a href="#" class="btn btn-primary btn-sm">Edit</a>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">#14258</th>
-                                                    <td>
-                                                        <div>
-                                                            <img src="assets/img/users/user-4.jpg" alt=""
-                                                                class="avatar-xs rounded-circle me-2"> Robert Sitton
-                                                        </div>
-                                                    </td>
-                                                    <td>17/1/2019</td>
-                                                    <td>$116</td>
-                                                    <td><span class="badge bg-success">Delivered</span></td>
-                                                    <td>
-                                                        <div>
-                                                            <a href="#" class="btn btn-primary btn-sm">Edit</a>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">#14259</th>
-                                                    <td>
-                                                        <div>
-                                                            <img src="assets/img/users/user-5.jpg" alt=""
-                                                                class="avatar-xs rounded-circle me-2"> Alberto Jackson
-                                                        </div>
-                                                    </td>
-                                                    <td>18/1/2019</td>
-                                                    <td>$109</td>
-                                                    <td><span class="badge bg-danger">Cancel</span></td>
-                                                    <td>
-                                                        <div>
-                                                            <a href="#" class="btn btn-primary btn-sm">Edit</a>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">#14260</th>
-                                                    <td>
-                                                        <div>
-                                                            <img src="assets/img/users/user-6.jpg" alt=""
-                                                                class="avatar-xs rounded-circle me-2"> David Sanchez
-                                                        </div>
-                                                    </td>
-                                                    <td>19/1/2019</td>
-                                                    <td>$120</td>
-                                                    <td><span class="badge bg-success">Delivered</span></td>
-                                                    <td>
-                                                        <div>
-                                                            <a href="#" class="btn btn-primary btn-sm">Edit</a>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">#14261</th>
-                                                    <td>
-                                                        <div>
-                                                            <img src="assets/img/users/user-2.jpg" alt=""
-                                                                class="avatar-xs rounded-circle me-2"> Philip Smead
-                                                        </div>
-                                                    </td>
-                                                    <td>15/1/2018</td>
-                                                    <td>$94</td>
-                                                    <td><span class="badge bg-warning">Pending</span></td>
-                                                    <td>
-                                                        <div>
-                                                            <a href="#" class="btn btn-primary btn-sm">Edit</a>
-                                                        </div>
-                                                    </td>
-                                                </tr>
+                                                </tr>                                   
                                             </tbody>
                                         </table>
                                     </div>
@@ -292,7 +215,7 @@
 
 
             
-            <footer class="footer">
+            <!-- <footer class="footer">
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-12">
@@ -300,7 +223,7 @@
                         </div>
                     </div>
                 </div>
-            </footer>
+            </footer> -->
 
         </div>
         <!-- end main content-->

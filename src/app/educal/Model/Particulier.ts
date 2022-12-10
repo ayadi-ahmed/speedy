@@ -7,4 +7,5 @@ emailp!:string;
 motdepassep!:string ;
 telephonep!:number ;
 adressep!:string ;
+isBrico!:boolean;
 }
