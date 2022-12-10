@@ -20,6 +20,12 @@ import { SignInMainComponent } from './educal/sign-in/sign-in-main/sign-in-main.
 import { SignUpMainComponent } from './educal/sign-up/sign-up-main/sign-up-main.component';
 import { ErrorPageComponent } from './educal/error-page/error-page.component';
 import { ContactMainComponent } from './educal/contact/contact-main/contact-main.component';
+import { DashboardComponent } from './educal/dashboard/dashboard.component';
+import { DashboardBricoComponent } from './educal/dashboard/dashboard-brico/dashboard-brico.component';
+import { DashParticuliersComponent } from './educal/dashboard/dash-particuliers/dash-particuliers.component';
+import { DashServicesComponent } from './educal/dashboard/dash-services/dash-services.component';
+import { DashRdvComponent } from './educal/dashboard/dash-rdv/dash-rdv.component';
+import { DashProfilComponent } from './educal/dashboard/dash-profil/dash-profil.component';
 
 
 
@@ -31,8 +37,28 @@ const routes: Routes = [
     component: HomeTwoComponent
   },
   {
-    path: 'home-three',
-    component: HomeThreeComponent
+    path: 'dashboard',
+    component: DashboardComponent
+  },
+  {
+    path: 'dashboard/profil',
+    component: DashProfilComponent
+  },
+  {
+    path: 'dashboard/bricoleurs',
+    component: DashboardBricoComponent
+  },
+  {
+    path: 'dashboard/particuliers',
+    component: DashParticuliersComponent
+  },
+  {
+    path: 'dashboard/services',
+    component: DashServicesComponent
+  },
+  {
+    path: 'dashboard/rdv',
+    component: DashRdvComponent
   },
   {
     path: 'courses',
@@ -47,7 +73,7 @@ const routes: Routes = [
     component: CourseSidebarMainComponent
   },
   {
-    path: 'service-1',
+    path: 'service/:id',
     component: CourseDetailsComponent
   },
   {

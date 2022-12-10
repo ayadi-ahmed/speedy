@@ -7,38 +7,38 @@
                  <h2 class="section__title">Veuillez remplir ce <span class="yellow-bg yellow-bg-big">formulaire<img src="assets/img/shape/yellow-bg.png" alt=""></span></h2>
               </div>
               <div class="contact__form">
-                 <form action="assets/mail.php">
+                 <form [formGroup]="addServiceForm" (ngSubmit)="addService()">
                     <div class="row">
-                       <div class="col-xxl-6 col-xl-6 col-md-6">
+
+                     <div class="col-xxl-12">
+                        <div class="contact__form-input">
+                           <input type="text" placeholder="Nom du service" formControlName="nomService">
+                        </div>
+                     </div>
+                     
+                       <div class="col-xxl-12">
                           <div class="contact__form-input">
-                             <input type="text" placeholder="Nom et prénom" name="name">
-                          </div>
-                       </div>
-                       <div class="col-xxl-6 col-xl-6 col-md-6">
-                          <div class="contact__form-input">
-                             <input type="email" placeholder="Votre Email" name="email">
+                             <input type="text" placeholder="Description du service" formControlName="descriptionService">
                           </div>
                        </div>
                        <div class="col-xxl-12">
                           <div class="contact__form-input">
-                             <input type="text" placeholder="Compétences" name="subject">
-                          </div>
-                       </div>
-                       <div class="col-xxl-12">
-                          <div class="contact__form-input">
-                           <input type="text" placeholder="Prix proposé (TND)" name="subject">
+                           <input type="number" placeholder="Prix du service (TND)" formControlName="prixService" >
                         </div>
                        </div>
                        <div class="col-xxl-12">
                         <div class="contact__form-input">
-                         <input type="number" placeholder="Durée d'intervention (heure)" name="subject">
+                         <input type="number" placeholder="Durée du service" formControlName="dureeService">
+                      </div>
+                     </div>
+
+                     <div class="col-xxl-12">
+                        <div class="contact__form-input">
+                         <input type="text" placeholder="Photo du service" formControlName="photoService">
                       </div>
                      </div>
                      <div class="col-xxl-12">
-                        <div class="contact__form-input">
-                         <input type="number" placeholder="Zones d'intervention" name="subject">
-                      </div>
-                     </div>
+
                        <div class="col-xxl-12">
                           <div class="contact__form-agree  d-flex align-items-center mb-20">
                              <input class="e-check-input" type="checkbox" id="e-agree">
@@ -50,6 +50,7 @@
                              <button type="submit" class="e-btn">Confirmer</button>
                           </div>
                        </div>
+                    </div>
                     </div>
                  </form>
               </div>

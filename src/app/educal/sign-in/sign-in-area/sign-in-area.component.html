@@ -26,19 +26,19 @@
                  </div>
               </div>
               <div class="sign__form">
-                  <form  [formGroup]="login" (ngSubmit)="logindata(login)" >
+                  <form>
 
                     <div class="form_group sign__input-wrapper mb-25">
                        <h5>Votre email</h5>
                        <div class="sign__input">
-                          <input type="text" formControlName="email" placeholder="Addresse e-mail">
+                          <input type="text" [(ngModel)]="email" name="email" placeholder="Addresse e-mail">
                           <i class="fal fa-envelope"></i>
                        </div>
                     </div>
                     <div class="form_group sign__input-wrapper mb-10">
                        <h5>Mot de passe</h5>
                        <div class="sign__input">
-                          <input type="text" formControlName="password" placeholder="Mot de passe">
+                          <input type="text" [(ngModel)]="password" name="password" placeholder="Mot de passe">
                           <i class="fal fa-lock"></i>
                        </div>
                     </div>
@@ -55,7 +55,7 @@
                     </div>
                     <!-- <button class="e-btn  w-100"> <span></span> Se connecter</button> -->
                     <div class="form-group">
-                        <input type="submit" class="btn btn-primary py-3 px-5" value="Se connecter">
+                        <button type="submit" class="btn btn-primary py-3 px-5" (click)="logindata()" >Se connecter</button>
                     </div>
                     <div class="sign__new text-center mt-20">
                        <p>Vous êtes nouveau? <a [routerLink]="['/sign-up']">S'enregistrer</a></p>

@@ -10,34 +10,40 @@ import { UserService } from '../../Services/user.service';
   styleUrls: ['./sign-in-area.component.scss']
 })
 export class SignInAreaComponent implements OnInit {
-  login!: FormGroup;
-  constructor(private formBuilder:FormBuilder, private userService: UserService, private router:Router) {
-   }
-
-  ngOnInit(): void {
-    this.login=this.formBuilder.group(
-      {
-     email:[""],
-     password:[""]
-    });
+  //login!: FormGroup;
+  email : string = "";
+  password : string  = "";
+  constructor(private formBuilder: FormBuilder, private userService: UserService, private router: Router) {
   }
 
-  logindata(login: FormGroup){
-    this.userService.login().subscribe(res=>{
-      const user = res.find((a:any)=>{
-      return a.email===this.login.value.email && a.password===this.login.value.password
-    });
+  ngOnInit(): void {
+   /*  this.login = this.formBuilder.group(
+      {
+        email: [""],
+        password: [""]
+      });
+ */
 
-    if(user){
-      alert('you are logged in');
-      this.login.reset();
-      this.router.navigate([""]);
-    }else{
-      alert('user not found');
-      this.router.navigate(["sign-in"]);
+  }
 
-    }
-    });
+  logindata() {
+    console.log({'email':this.email,'password' : this.password});
+    this.userService.login({'email':this.email,'password' : this.password}).subscribe(res => {
+      //  const user = res.find((a: any) => {
+      //   return a.emailp === this.login.value.emailp && a.motdepassep === this.login.value.motdepassep
+      // }); 
 
-    } 
+       if (this.email === res.emailp && this.password===res.motdepassep) {
+        alert('you are logged in');
+        this.router.navigate(["/dashboard"]);
+      } else {
+        alert('user not found');
+        this.router.navigate(["sign-in"]);
+       } 
+
+      localStorage.setItem("speedyLoggedUser", JSON.stringify(res));
+
+    })
+  
+  }
 }

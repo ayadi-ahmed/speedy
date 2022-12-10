@@ -76,6 +76,14 @@ import { ContactAreaComponent } from './contact/contact-area/contact-area.compon
 import { ContactInfoComponent } from './contact/contact-info/contact-info.component';
 import { BlogTwoComponent } from './home-two/blog-two/blog-two.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { DashboardBricoComponent } from './dashboard/dashboard-brico/dashboard-brico.component';
+import { DashHeaderComponent } from './dashboard/dash-header/dash-header.component';
+import { DashLeftComponent } from './dashboard/dash-left/dash-left.component';
+import { DashParticuliersComponent } from './dashboard/dash-particuliers/dash-particuliers.component';
+import { DashServicesComponent } from './dashboard/dash-services/dash-services.component';
+import { DashRdvComponent } from './dashboard/dash-rdv/dash-rdv.component';
+import { DashProfilComponent } from './dashboard/dash-profil/dash-profil.component';
 
 
 @NgModule({
@@ -152,6 +160,14 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ContactAreaComponent,
     ContactInfoComponent,
     BlogTwoComponent,
+    DashboardComponent,
+    DashboardBricoComponent,
+    DashHeaderComponent,
+    DashLeftComponent,
+    DashParticuliersComponent,
+    DashServicesComponent,
+    DashRdvComponent,
+    DashProfilComponent,
   ],
   imports: [
     CommonModule,
